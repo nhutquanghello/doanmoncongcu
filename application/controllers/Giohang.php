@@ -21,7 +21,7 @@ class Giohang extends CI_Controller {
     }
     
     public function index(){
-        $this->data['title']='H2 store - Giỏ hàng của bạn';
+        $this->data['title']='Tini store - Giỏ hàng của bạn';
         $this->data['view']='index';
         $this->load->view('frontend/layout',$this->data);
     }
@@ -209,7 +209,7 @@ class Giohang extends CI_Controller {
             $this->email->from('nhutquang0909@gmail.com', 'H2 store');
             $list = array($val['email']);
             $this->email->to($list);
-            $this->email->subject('Hệ thống H2 store');
+            $this->email->subject('Hệ thống Tini store');
             $body = $this->load->view('frontend/modules/email',$data,TRUE);
             $this->email->message($body); 
             $this->email->send();
@@ -219,7 +219,7 @@ class Giohang extends CI_Controller {
             $this->Mcustomer->customer_update($datax,$idx);
             $this->session->unset_userdata('id-info-customer','money_check_coupon');
         }   
-        $this->data['title']='H2 store.vn - Kết quả đơn hàng';
+        $this->data['title']='Tini store.vn - Kết quả đơn hàng';
         $this->data['view']='thankyou';
         $this->load->view('frontend/layout',$this->data);
     }

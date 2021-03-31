@@ -22,7 +22,7 @@ class Thongtin extends CI_Controller {
     }
     
     public function index(){
-        $this->data['title']='H2 store - Thông tin tài khoản';
+        $this->data['title']='Tini store - Thông tin tài khoản';
         $this->data['view']='index';
         $this->load->view('frontend/layout',$this->data);
     }

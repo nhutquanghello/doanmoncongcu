@@ -77,7 +77,7 @@ class Sanpham extends CI_Controller {
         $total=$this->Mproduct->product_chude_count($listcat);
         $this->data['strphantrang']=$this->phantrang->PagePer($total, $current, $limit, $url='san-pham/'.$link);
         $this->data['list']=$this->Mproduct->product_list_cat_limit($listcat, $limit,$first,$f,$od);
-        $this->data['title']='H2 store - Sản phẩm theo từng danh mục';  
+        $this->data['title']='Tini store - Sản phẩm theo từng danh mục';  
         $this->data['view']='category';
         if(isset($_POST['sapxep-category'])){ 
             $html='<script>document.location.reload(true);</script>';
@@ -90,7 +90,7 @@ class Sanpham extends CI_Controller {
     public function detail($link){   
         $row = $this->Mproduct->product_detail($link);
         $this->data['row']=$row;
-        $this->data['title']='H2 store - '.$row['name'];  
+        $this->data['title']='Tini store - '.$row['name'];  
         $this->data['view']='detail';
         $this->load->view('frontend/layout',$this->data);
     }

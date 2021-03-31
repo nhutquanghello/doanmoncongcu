@@ -10,7 +10,6 @@ class Lienhe extends CI_Controller {
 		$this->load->model('frontend/Mcategory');
 		$this->load->model('frontend/Mproduct');
 		$this->load->model('frontend/Mcontact');
-
 	}
 	
 	public function index()
@@ -35,7 +34,7 @@ class Lienhe extends CI_Controller {
 			$this->Mcontact->contact_insert($mydata);
 			echo '<script>alert("Tin nhắn của bạn đã gửi đi thành công !")</script>';
 		}
-		$this->data['title']="H2 store - Liên hệ";
+		$this->data['title']="Tini store - Liên hệ";
 		$this->data['view']='index';
 		$this->load->view('frontend/layout',$this->data);
 	}

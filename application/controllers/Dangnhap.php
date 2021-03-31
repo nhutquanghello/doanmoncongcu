@@ -122,7 +122,7 @@ class Dangnhap extends CI_Controller {
             $this->email->initialize($config);
             $this->email->from('nhutquang0909@gmail.com', 'H2 store');
             $this->email->to($email);
-            $this->email->subject('Hệ thống H2 store - Quà thành viên mới');
+            $this->email->subject('Hệ thống Tini store - Quà thành viên mới');
             $this->email->message('Bạn đã trở thành thành viên mới của cửa hàng H2 store, Cửa hàng tặng bạn 1 mã giảm giá giảm 100.000 vnđ : '.$tempcoupon.' , Mã này có giá trị tới ngày '.$tempdatelimit.'
                 Hãy sử dụng tài khoản để mua hàng để tích lũy nhận thêm nhiều ưu đãi !!!!');
             $this->email->send();
@@ -165,22 +165,22 @@ class Dangnhap extends CI_Controller {
             $config['smtp_host']    = 'ssl://smtp.gmail.com';
             $config['smtp_port']    = '465';
             $config['smtp_timeout'] = '7';
-            $config['smtp_user']    = 'doviethieu9999@gmail.com';
-            $config['smtp_pass']    = 'doviethieu';
+            $config['smtp_user']    = 'nhutquang0909@gmail.com';
+            $config['smtp_pass']    = 'nhutquang';
             $config['charset']    = 'utf-8';
             $config['newline']    = "\r\n";
             $config['wordwrap'] = TRUE;
             $config['mailtype'] = 'html';
             $config['validation'] = TRUE;   
             $this->email->initialize($config);
-            $this->email->from('doviethieu9999@gmail.com', 'H2 store');
+            $this->email->from('nhutquang0909@gmail.com', 'Tini store');
             $this->email->to($list['email']);
-            $this->email->subject('Hệ thống H2 store - Lấy lại mật khẩu');
+            $this->email->subject('Hệ thống Tini store - Lấy lại mật khẩu');
             $this->email->message('Vui lòng truy cập đường dẫn để lấy lại mật khẩu <button class="btn"><a href="'.base_url().'dangnhap/reset_password_new/'.$list['id'].'">Lấy lại mật khẩu</a></button>'); 
             $this->email->send();
             $this->data['success']='Bạn vui lòng kiểm tra mail để lấy lại mật khẩu!';   
         }  
-        $this->data['title']='H2 store - Quên mật khẩu';   
+        $this->data['title']='Tini store - Quên mật khẩu';   
         $this->data['view']='forget_password';
         $this->load->view('frontend/layout',$this->data);  
     }
@@ -224,7 +224,7 @@ class Dangnhap extends CI_Controller {
         }
 
     }
-    $this->data['title']='H2 store - Cập nhật mật khẩu mới';
+    $this->data['title']='Tini store - Cập nhật mật khẩu mới';
     $this->data['view']='reset_password_new';
     $this->load->view('frontend/layout',$this->data);
 }
