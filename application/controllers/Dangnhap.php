@@ -112,22 +112,21 @@ class Dangnhap extends CI_Controller {
             $config['smtp_host']    = 'ssl://smtp.gmail.com'; // server gui mail
             $config['smtp_port']    = '465';
             $config['smtp_timeout'] = '7';
-            $config['smtp_user']    = 'doviethieu9999@gmail.com';
-            $config['smtp_pass']    = 'doviethieu';
+            $config['smtp_user']    = 'nhutquang0909@gmail.com';
+            $config['smtp_pass']    = 'nhutquang';
             $config['charset']    = 'utf-8';
             $config['newline']    = "\r\n";
             $config['wordwrap'] = TRUE;
             $config['mailtype'] = 'html';
             $config['validation'] = TRUE;   
             $this->email->initialize($config);
-            $this->email->from('doviethieu9999@gmail.com', 'H2 store');
+            $this->email->from('nhutquang0909@gmail.com', 'H2 store');
             $this->email->to($email);
             $this->email->subject('Hệ thống H2 store - Quà thành viên mới');
             $this->email->message('Bạn đã trở thành thành viên mới của cửa hàng H2 store, Cửa hàng tặng bạn 1 mã giảm giá giảm 100.000 vnđ : '.$tempcoupon.' , Mã này có giá trị tới ngày '.$tempdatelimit.'
                 Hãy sử dụng tài khoản để mua hàng để tích lũy nhận thêm nhiều ưu đãi !!!!');
             $this->email->send();
             $this->data['success']='Đăng ký thành công! Bạn đã nhận được 1 mã giảm giá cho thành viên mới, vui lòng kiểm tra email !!';
-
         }  
         $this->data['title']='H2 store - Đăng ký tài khoản';   
         $this->data['view']='dangky';

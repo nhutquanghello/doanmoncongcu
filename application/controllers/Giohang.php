@@ -197,8 +197,8 @@ class Giohang extends CI_Controller {
             $config['smtp_host']    = 'ssl://smtp.gmail.com';
             $config['smtp_port']    = '465';
             $config['smtp_timeout'] = '7';
-            $config['smtp_user']    = 'doviethieu9999@gmail.com';
-            $config['smtp_pass']    = 'doviethieu';
+            $config['smtp_user']    = 'nhutquang0909@gmail.com';
+            $config['smtp_pass']    = 'nhutquang';
             // mk trên la mat khau dung dung cua gmail, có thể dùng gmail hoac mat khau. Tao mat khau ung dung de bao mat tai khoan
             $config['charset']    = 'utf-8';
             $config['newline']    = "\r\n";
@@ -206,7 +206,7 @@ class Giohang extends CI_Controller {
             $config['mailtype'] = 'html';
             $config['validation'] = TRUE;   
             $this->email->initialize($config);
-            $this->email->from('doviethieu9999@gmail.com', 'H2 store');
+            $this->email->from('nhutquang0909@gmail.com', 'H2 store');
             $list = array($val['email']);
             $this->email->to($list);
             $this->email->subject('Hệ thống H2 store');
